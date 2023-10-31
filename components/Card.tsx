@@ -21,9 +21,10 @@ const Card = ({ bg, title, description, viewLink, githubLink }: Props) => {
                     View 
                     <img className="ml-[5px]" src="/arrow.svg" />
                 </Link> }
+                { githubLink && 
                 <Link className="py-[5px] px-[15px] text-sm border border-paleGrey rounded-md" href={githubLink} target="_blank">
                     View GitHub
-                </Link>
+                </Link> }
             </div>
         </div>
     )

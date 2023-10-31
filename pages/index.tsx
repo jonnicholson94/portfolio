@@ -18,6 +18,7 @@ const HomePage = () => {
         </SideContainer>
         
         <MainContainer>
+          <Card bg="bg-salmon" title="CraftedCopy" description="An AI powered app, built using Next.js 14." viewLink="https://craftedcopy.app" githubLink="" />
           <Card bg="bg-blue" title="Emble" description="The frontend for Emble, built with Next.js and TypeScript." viewLink="https://emble.app" githubLink="https://github.com/jonnicholson94/emble-app" />
           <Card bg="bg-green" title="Emble server" description="Emble's server, written in Go and querying a Postgres instance." githubLink="https://github.com/jonnicholson94/emble-server" />
           <Card bg="bg-lilac" title="Kanby" description="A simple kanban board, built with Next.js and TypeScript." viewLink="https://kanby.vercel.app" githubLink="https://github.com/jonnicholson94/kanby-open" />
