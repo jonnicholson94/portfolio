@@ -2,10 +2,10 @@
 import Head from "next/head";
 import { generateDate } from "@/_lib/generateDate";
 import Header from "@/components/Header";
-import { InferGetServerSidePropsType } from "next";
+import { InferGetStaticPropsType } from "next";
 import Link from "next/link";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 
     const response = await fetch(`${process.env.BASE_CLIENT_URL}/api/fetchPosts`)
 
@@ -14,7 +14,7 @@ export const getServerSideProps = async () => {
     return { props: { pages: json }}
 }
 
-export default function Blog({ pages }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Blog({ pages }: InferGetStaticPropsType<typeof getStaticProps>) {
 
     return (
         <>

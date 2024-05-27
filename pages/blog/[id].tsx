@@ -1,6 +1,6 @@
 
 import Head from "next/head"
-import type { InferGetServerSidePropsType } from "next"
+import type { InferGetStaticPropsType } from "next"
 
 import { NotionRenderer } from "@notion-render/client"
 import hljsPlugin from "@notion-render/hljs-plugin"
@@ -9,7 +9,7 @@ import Link from "next/link"
 import { Block } from "@notion-render/client/dist/types"
 import { generateDate } from "@/_lib/generateDate"
 
-export async function getServerSideProps({ params }: { params: { id: string } }) {
+export async function getStaticProps({ params }: { params: { id: string } }) {
 
     const { id } = params 
 
@@ -27,7 +27,14 @@ export async function getServerSideProps({ params }: { params: { id: string } })
 
 }
 
-export default function BlogPost({ title, created_date, html }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export async function getStaticPaths() {
+    return {
+      paths: [],
+      fallback: true,
+    };
+  }
+
+export default function BlogPost({ title, created_date, html }: InferGetStaticPropsType<typeof getStaticProps>) {
 
     return (
         <>
