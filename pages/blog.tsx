@@ -32,7 +32,7 @@ export default function Blog({ pages }: InferGetStaticPropsType<typeof getStatic
                             <div className="h-auto flex-grow flex items-start justify-center flex-col">
                                 <h2 className="text-[24px] font-bold">{page.properties["Title"].title[0].plain_text}</h2>
                                 <p className="text-[12px] text-[#c9c9c9] mt-[2.5px]">{generateDate(page.created_time)}</p>
-                                <p className="mt-[10px]">{page.properties["Description"].rich_text[0].plain_text}</p>
+                                <p className="h-auto mt-[10px]">{page.properties["Description"].rich_text[0].plain_text}</p>
                             </div>
 
                             <img className="h-[20px] w-[20px]" src="/chevron.svg" alt="A chevron to indicate a blog post can be opened" />
