@@ -23,7 +23,7 @@ export default function Blog({ pages }: InferGetStaticPropsType<typeof getStatic
         </Head>
         <div className="h-auto w-full flex items-center justify-center flex-col">
             <Header />
-            <div className="h-auto xs:w-[95%] md:w-[500px] mt-[50px]">
+            <div className="h-auto xs:w-[90%] md:w-[500px] mt-[50px]">
                 { pages.length === 0 && <p className="text-center">No blog posts yet. Check back soon.</p>}
                 { pages.map((page: any) => {
                     { /* TODO: Change type of response to ensure it has correct properties. Currently set to any. */ }

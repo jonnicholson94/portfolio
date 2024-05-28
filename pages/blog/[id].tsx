@@ -42,8 +42,7 @@ export default function BlogPost({ title, created_date, html }: InferGetStaticPr
             <title>{title ? title : "Blog"} | Jon Nicholson</title>
         </Head>
         <div className="h-auto w-full flex items-center justify-center flex-col">
-            <Header />
-            <div className="h-auto xs:w-[95%] md:w-[700px] mt-[50px] flex flex-col items-start justify-center">
+            <div className="h-auto xs:w-[90%] md:w-[700px] mt-[50px] flex flex-col items-start justify-center">
                 <Link className="h-auto w-auto flex items-center justify-center" href="/blog">
                     <img className="h-[20px] w-[20px] mr-[7px]" src="/arrow-left.svg" alt="An arrow pointing left, to indicate a user can go backwards" />
                     Go back

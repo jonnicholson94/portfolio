@@ -17,7 +17,7 @@ const HomePage = () => {
         <title>Work history | Jon Nicholson</title>
       </Head>
       <Header />
-      <div className="h-auto xs:w-[95%] md:w-[600px] flex items-start justify-centerxx flex-col my-[50px]">
+      <div className="h-auto xs:w-[90%] md:w-[600px] flex items-start justify-centerxx flex-col my-[50px]">
         <Hero />
         <CareerHistory />
         <EducationHistory />
